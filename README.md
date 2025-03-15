@@ -27,8 +27,11 @@ The first block of code consists of three functions related to downloading video
 2. The second block of code is designed to download videos for a given list of words across various data sources.
    
 The steps include:
+
 •	Normalization: The word is normalized to handle case sensitivity and extra spaces.
+
 •	Metadata Filtering: Based on the normalized word, the metadata CSV is filtered to extract video links.
+
 •	Download Process: For each word and data source, the videos are downloaded to the specified directory.
 
 ***************************************************************************************************************************************************************************************************************
