@@ -8,19 +8,23 @@ The code outlines two distinct video downloading processes:
 
 One is designed to download videos from specific links (the first code)
 The second is intended to download videos for words from multiple data sources (the second code)
-```1. First Code Explanation (Video Downloading Functions):```
-The first block of code consists of three functions related to downloading videos:
-  1.	download_video(video_url, save_path):
- This function downloads a video from a specified URL (video_url) and saves it to a specified path (save_path).
- It sends an HTTP GET request to the video URL and writes the content (video) to a file if the request is successful.
-  2.  download_video_from_link(link, output_path):
- This function uses a streaming approach to download the video content, chunking the download in smaller pieces (8 KB by default) to avoid excessive memory usage 
- If an error occurs during the download, it catches the exception and prints the error message.
-  3.	 download_video_from_metadata(metadata, data_source, output_path):
- This function takes a DataFrame (metadata), filters the data based on a given data_source, and downloads videos based on the provided video URLs.
- The video files are saved using a name derived from the data source and the video's index.
 
-```The second block of code is designed to download videos for a given list of words across various data sources.```
+1. First Code Explanation (Video Downloading Functions):```
+The first block of code consists of three functions related to downloading videos:
+
+    1.download_video(video_url, save_path):
+       This function downloads a video from a specified URL (video_url) and saves it to a specified path (save_path).
+         It sends an HTTP GET request to the video URL and writes the content (video) to a file if the request is successful.
+   
+    2.download_video_from_link(link, output_path):
+       This function uses a streaming approach to download the video content, chunking the download in smaller pieces (8 KB by default) to avoid excessive memory usage 
+       If an error occurs during the download, it catches the exception and prints the error message.
+   
+    3.download_video_from_metadata(metadata, data_source, output_path):
+       This function takes a DataFrame (metadata), filters the data based on a given data_source, and downloads videos based on the provided video URLs.
+       The video files are saved using a name derived from the data source and the video's index.
+
+The second block of code is designed to download videos for a given list of words across various data sources.
 The steps include:
 •	Normalization: The word is normalized to handle case sensitivity and extra spaces.
 •	Metadata Filtering: Based on the normalized word, the metadata CSV is filtered to extract video links.
