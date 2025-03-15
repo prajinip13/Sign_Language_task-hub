@@ -4,19 +4,17 @@
 
 ## 1. _download_videos.py_
 
-The code outlines two distinct video downloading processes: 
-
-One is designed to download videos from specific links (the first code)
-The second is intended to download videos for words from multiple data sources (the second code)
-
-1. First Code Explanation (Video Downloading Functions):```
-The first block of code consists of three functions related to downloading videos:
+This code download video files from URLs listed in a metadata DataFrame (which contains video metadata like URLs and data sources). 
+The script organizes the download process into three main functions: download_video, download_video_from_link, and download_video_from_metadata
 
     1._download_video(video_url, save_path)_:
-       This function downloads a video from a specified URL (video_url) and saves it to a specified path (save_path).
-         It sends an HTTP GET request to the video URL and writes the content (video) to a file if the request is successful.
+   
+       This function downloads single video from a specified URL (video_url) and saves it to a specified path (save_path).
+       It sends an HTTP GET request to the video URL and writes the content (video) to a file if the request is successful.
    
     2._download_video_from_link(link, output_path)_:
+   
+       Download a video from a URL and save it to a file
        This function uses a streaming approach to download the video content, chunking the download in smaller pieces (8 KB by default) to avoid excessive memory usage 
        If an error occurs during the download, it catches the exception and prints the error message.
    
@@ -24,15 +22,6 @@ The first block of code consists of three functions related to downloading video
        This function takes a DataFrame (metadata), filters the data based on a given data_source, and downloads videos based on the provided video URLs.
        The video files are saved using a name derived from the data source and the video's index.
 
-2. The second block of code is designed to download videos for a given list of words across various data sources.
-   
-The steps include:
-
-•	Normalization: The word is normalized to handle case sensitivity and extra spaces.
-
-•	Metadata Filtering: Based on the normalized word, the metadata CSV is filtered to extract video links.
-
-•	Download Process: For each word and data source, the videos are downloaded to the specified directory.
 
 ***************************************************************************************************************************************************************************************************************
 ## 2 _FinalScraping.ipynb_
@@ -52,6 +41,25 @@ Example:
 •	When the program is executed, it will: 
     o	Look for metadata CSV files in directories corresponding to INES, V-Librasil, and SignBank.
     o	For each word (e.g., "VACINA", "Prevenção"), it will download the videos associated with that word and save them in a folder like Healthbrazil/INES/videos/review/VACINA
+
+## Functions:
+
+_download_video_from_link(video_url, save_path)_
+
+Download a video from a URL and save it to a file
+
+
+_download_videos_for_word(word, data_sources, base_path)_ 
+
+Download all videos for a specific word across all data sources.
+
+
+_download_videos_for_words(words_to_download, data_sources, base_path)_
+
+Download all videos for a list of words across all data sources
+
+
+
 
 ## Folder Structure:
 
