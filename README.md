@@ -24,9 +24,12 @@ The script organizes the download process into three main functions: download_vi
        The video files are saved using a name derived from the data source and the video's index.
 
 
+
+
+
 ***************************************************************************************************************************************************************************************************************
 ## 2 _FinalScraping.ipynb_
-The code is a Python script that downloads videos from multiple data sources for a given list of words. Here's a breakdown of how the code works:
+The code is a Python script that downloads videos from multiple data sources for a given list of words and save them in specific folder structure. Here's a breakdown of how the code works:
 1.	### Define Data Sources and Words:
     o	The data sources (INES, V-Librasil, SignBank) are defined, along with a list of words to download videos for.
 2.	### Iterate Over Words:
@@ -51,16 +54,20 @@ Download a video from a URL and save it to a file
 
 
 _download_videos_for_word(word, data_sources, base_path)_ 
-
-Download all videos for a specific word across all data sources.
+(This function does actual work of downloading)
+This function handles downloading videos for a single word.
+It checks all available data sources, searches for the given word in the metadata, and if it finds any video URLs related to that word, it proceeds to download them.
 
 
 _download_videos_for_words(words_to_download, data_sources, base_path)_
 
-Download all videos for a list of words across all data sources
+This function is responsible for handling multiple words.
+It takes a list of words (e.g., ['VACINA', 'Antecipar', 'Prevenção']) and iterates over each word in that list.
+For each word in the list, it calls the download_videos_for_word() function to download videos for that particular word.
+_download_videos_for_words_  breaks the list of words and calls _download_videos_for_word_ for each individual word in that list.
 
 
-
+**There's no direct need to use download_video_from_metadata() from _download_videos.py_ because you're already working directly with metadata inside download_videos_for_word()**
 
 ## Folder Structure:
 
