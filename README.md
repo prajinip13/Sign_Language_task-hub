@@ -47,7 +47,7 @@ Example:
 ## Folder Structure:
 
 
-task-hub/
+```task-hub/
 ├── INES/   
 │   ├── metadata.csv      # Metadata for INES
 │   ├── videos/           # Original data
@@ -65,7 +65,7 @@ task-hub/
 │   ├── videos/           # Original data
 │   │   ├── review/       # Review folder
 │   │   │   └── folders containing videos/  # Video files (No files yet as this needs a separate set of actions)
-
+```
 
 
 
