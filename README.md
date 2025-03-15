@@ -62,7 +62,7 @@ It checks all available data sources, searches for the given word in the metadat
 _download_videos_for_words(words_to_download, data_sources, base_path)_
 
 This function is responsible for handling multiple words.
-It takes a list of words (e.g., ['VACINA', 'Antecipar', 'Prevenção']) and iterates over each word in that list.
+It takes a list of words (e.g., ['VACINA', 'Antecipar', 'Prevenção', 'Hospital','SINTOMA','Medicamento','MÃ¡ximo','Medicina']) and iterates over each word in that list.
 For each word in the list, it calls the download_videos_for_word() function to download videos for that particular word.
 _download_videos_for_words_  breaks the list of words and calls _download_videos_for_word_ for each individual word in that list.
 
