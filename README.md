@@ -30,14 +30,14 @@ The second block of code is designed to download videos for a given list of word
 The code is a Python script that downloads videos from multiple data sources for a given list of words. Here's a breakdown of how the code works:
 1.	Define Data Sources and Words:
     o	The data sources (INES, V-Librasil, SignBank) are defined, along with a list of words to download videos for.
-2.	Iterate Over Words:
+3.	Iterate Over Words:
     o	The program iterates over each word in the words_to_download list.
-3.	Download Videos for Each Word:
+5.	Download Videos for Each Word:
     o	For each word, it calls download_videos_for_word, which: 
         	-Checks for metadata related to the word from each data source.
           -Extracts the video URLs and downloads the videos using download_video_from_link.
-4.	Saving Videos:
-o	The videos are saved in a directory structure like: base_path/{data_source}/videos/review/{word}.
+7.	Saving Videos:
+    o	The videos are saved in a directory structure like: base_path/{data_source}/videos/review/{word}.
 
 Example:
 •	When the program is executed, it will: 
