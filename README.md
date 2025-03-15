@@ -12,7 +12,7 @@ The second is intended to download videos for words from multiple data sources (
 1. First Code Explanation (Video Downloading Functions):```
 The first block of code consists of three functions related to downloading videos:
 
-    1.download_video(video_url, save_path):
+    1._download_video(video_url, save_path)_:
        This function downloads a video from a specified URL (video_url) and saves it to a specified path (save_path).
          It sends an HTTP GET request to the video URL and writes the content (video) to a file if the request is successful.
    
