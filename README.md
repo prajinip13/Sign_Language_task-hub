@@ -16,11 +16,11 @@ The first block of code consists of three functions related to downloading video
        This function downloads a video from a specified URL (video_url) and saves it to a specified path (save_path).
          It sends an HTTP GET request to the video URL and writes the content (video) to a file if the request is successful.
    
-    2.download_video_from_link(link, output_path):
+    2._download_video_from_link(link, output_path)_:
        This function uses a streaming approach to download the video content, chunking the download in smaller pieces (8 KB by default) to avoid excessive memory usage 
        If an error occurs during the download, it catches the exception and prints the error message.
    
-    3.download_video_from_metadata(metadata, data_source, output_path):
+    3._download_video_from_metadata(metadata, data_source, output_path)_:
        This function takes a DataFrame (metadata), filters the data based on a given data_source, and downloads videos based on the provided video URLs.
        The video files are saved using a name derived from the data source and the video's index.
 
