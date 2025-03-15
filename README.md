@@ -24,7 +24,8 @@ The first block of code consists of three functions related to downloading video
        This function takes a DataFrame (metadata), filters the data based on a given data_source, and downloads videos based on the provided video URLs.
        The video files are saved using a name derived from the data source and the video's index.
 
-The second block of code is designed to download videos for a given list of words across various data sources.
+2. The second block of code is designed to download videos for a given list of words across various data sources.
+   
 The steps include:
 •	Normalization: The word is normalized to handle case sensitivity and extra spaces.
 •	Metadata Filtering: Based on the normalized word, the metadata CSV is filtered to extract video links.
