@@ -10,19 +10,19 @@
 │   ├── metadata.csv      # Metadata for INES
 │   ├── videos/           # Original data
 │   │   ├── review/       # Review folder
-│   │   │   └── folders containing videos/  # Video files
+│   │   │   └── folders containing videos for each word/  # Video files
 │
 ├── VLibrasil/   
 │   ├── metadata.csv      # Metadata for VLibrasil
 │   ├── videos/           # Original data
 │   │   ├── review/       # Review folder
-│   │   │   └── folders containing videos/  # Video files
+│   │   │   └── folders containing videos for each word/  # Video files
 │
 ├── Signbank/   
 │   ├── metadata.csv      # Metadata for Signbank
 │   ├── videos/           # Original data
 │   │   ├── review/       # Review folder
-│   │   │   └── folders containing videos/  # Video files (No files yet as this needs a separate set of actions)
+│   │   │   └── folders containing videos for each word/  # Video files (No files were downloaded as site is insecure)
 ```
 
 
