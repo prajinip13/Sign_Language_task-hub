@@ -2,6 +2,35 @@
 
 
 
+## Folder Structure:
+
+
+```task-hub/
+├── INES/   
+│   ├── metadata.csv      # Metadata for INES
+│   ├── videos/           # Original data
+│   │   ├── review/       # Review folder
+│   │   │   └── folders containing videos/  # Video files
+│
+├── VLibrasil/   
+│   ├── metadata.csv      # Metadata for VLibrasil
+│   ├── videos/           # Original data
+│   │   ├── review/       # Review folder
+│   │   │   └── folders containing videos/  # Video files
+│
+├── Signbank/   
+│   ├── metadata.csv      # Metadata for Signbank
+│   ├── videos/           # Original data
+│   │   ├── review/       # Review folder
+│   │   │   └── folders containing videos/  # Video files (No files yet as this needs a separate set of actions)
+```
+
+
+
+
+
+
+
 ## 1. _download_videos.py_
 
 This code download video files from URLs listed in a metadata DataFrame (which contains video metadata like URLs and data sources). 
@@ -68,29 +97,4 @@ _download_videos_for_words_  breaks the list of words and calls _download_videos
 
 
 **There's no direct need to use download_video_from_metadata() from _download_videos.py_ because you're already working directly with metadata inside download_videos_for_word()**
-
-## Folder Structure:
-
-
-```task-hub/
-├── INES/   
-│   ├── metadata.csv      # Metadata for INES
-│   ├── videos/           # Original data
-│   │   ├── review/       # Review folder
-│   │   │   └── folders containing videos/  # Video files
-│
-├── VLibrasil/   
-│   ├── metadata.csv      # Metadata for VLibrasil
-│   ├── videos/           # Original data
-│   │   ├── review/       # Review folder
-│   │   │   └── folders containing videos/  # Video files
-│
-├── Signbank/   
-│   ├── metadata.csv      # Metadata for Signbank
-│   ├── videos/           # Original data
-│   │   ├── review/       # Review folder
-│   │   │   └── folders containing videos/  # Video files (No files yet as this needs a separate set of actions)
-```
-
-
 
