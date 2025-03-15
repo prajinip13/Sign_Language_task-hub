@@ -2,7 +2,7 @@
 
 
 
-## 1. download_videos.py
+## 1. _download_videos.py_
 
 This code download video files from URLs listed in a metadata DataFrame (which contains video metadata like URLs and data sources). 
 
