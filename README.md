@@ -46,23 +46,26 @@ Example:
 
 ## Folder Structure:
 
-SignLanguage/
-├── INES/   
-│   ├── metadata.csv      #metadata for INES
-│   ├── videos/           # Original data
-│   │   ├── review/       # 
-│   │   │   └── folders containing videos/  # Video files
 
-├── VLibrasil/   
-│   ├── metadata.csv      #metadata for VLibrasil
+task-hub/
+├── INES/   
+│   ├── metadata.csv      # Metadata for INES
 │   ├── videos/           # Original data
-│   │   ├── review/       # 
+│   │   ├── review/       # Review folder
 │   │   │   └── folders containing videos/  # Video files
-├── Signbank/   
-│   ├── metadata.csv      #metadata for Signbank
+│
+├── VLibrasil/   
+│   ├── metadata.csv      # Metadata for VLibrasil
 │   ├── videos/           # Original data
-│   │   ├── review/       # 
-│   │   │   └── folders containing videos/  # Video files (No files as this needs seperate set of actions)
+│   │   ├── review/       # Review folder
+│   │   │   └── folders containing videos/  # Video files
+│
+├── Signbank/   
+│   ├── metadata.csv      # Metadata for Signbank
+│   ├── videos/           # Original data
+│   │   ├── review/       # Review folder
+│   │   │   └── folders containing videos/  # Video files (No files yet as this needs a separate set of actions)
+
 
 
 
